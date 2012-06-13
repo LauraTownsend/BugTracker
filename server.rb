@@ -22,6 +22,45 @@ get '/' do
 	haml :index
 end
 
-get '/bug/:id' do 
+get '/id' do 
+	haml :getByID
+end
+
+post '/id' do
 	
 end
+
+get '/contributor' do
+	haml :getByContributor
+end
+
+get '/section' do
+	haml :getBySection
+end
+
+get '/date' do
+	haml :getByDate
+end
+
+post '/' do
+	section = params["section"]
+	content = params["content"]
+	contributor = params["contibutor"]
+	date = params["date"]
+	assigned = params["assigned"]
+	id = params["id"] ##TODO : assign id programmatically instead of manually
+	#tags
+	bug = {"section"=>"#{section}","content"=>"#{content}","contributor"=>"#{contributor}","date"=>"#{date}","assigned"=>"#{assigned}","id"=>"#{id}"}
+	coll.insert(bug)
+end
+
+
+
+#	application/type JSON
+#	Section : not null
+#	Content : not null
+#	Contributor : not null
+# 	Date : not null
+#	Assigned to : can be null
+#	id : can be assigned programatically but is required
+#	tags : can be null
