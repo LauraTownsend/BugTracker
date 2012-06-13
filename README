@@ -1,0 +1,9 @@
+Bug Tracker
+
+Ruby Program using Sinatra, haml and MongoDB. Bootstrap CSS used.
+
+Keep a track of bugs in a program. Bugs can be added, and searched for by date, contributor, id and section.
+
+Bugs are stored in a collection called 'bugs'.
+
+Web interface. 
