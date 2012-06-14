@@ -1,0 +1,21 @@
+%h2 Search Bugs
+%h3 Search by ID
+%div{:class=>"row"}
+	%div{:class=>"span8"}
+		%form{:class=>"well",:method=>"post"}
+			%input{:type=>"text",:name=>"id",:placeholder=>"type here"}
+			%br
+			%button{:type=>"submit",:class=>"btn btn-info"} Search Bugs
+	%div{:class=>"span4"}
+		%ul{:class=>"nav nav-list"}
+			%li
+				%a{:href=>"/"} Home
+			%li{:class=>"nav-header"} Search Categories
+			%li{:class=>"active"} 
+				%a{:href=>"/id"} ID
+			%li
+				%a{:href=>"/section"} Section
+			%li 
+				%a{:href=>"/contributor"} Contributor
+			%li
+				%a{:href=>"/date"} Date

@@ -23,7 +23,7 @@ get '/' do
 end
 
 get '/id' do 
-	haml :getByID
+	haml :id
 end
 
 post '/id' do
@@ -31,15 +31,15 @@ post '/id' do
 end
 
 get '/contributor' do
-	haml :getByContributor
+	haml :contributor
 end
 
 get '/section' do
-	haml :getBySection
+	haml :section
 end
 
 get '/date' do
-	haml :getByDate
+	haml :date
 end
 
 post '/' do
