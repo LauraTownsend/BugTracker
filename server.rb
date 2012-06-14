@@ -45,8 +45,9 @@ end
 post '/' do
 	section = params["section"]
 	content = params["content"]
-	contributor = params["contibutor"]
-	date = params["date"]
+	contributor = params["contributor"]
+	time = Time.new
+	date = "#{time.day}/#{time.month}/#{time.year}"
 	assigned = params["assigned"]
 	id = params["id"] ##TODO : assign id programmatically instead of manually
 	#tags

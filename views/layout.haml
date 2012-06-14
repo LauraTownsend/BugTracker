@@ -2,7 +2,15 @@
 %html
 	%head
 		%title Bug Tracker
-		%link(rel="stylesheet" href="css/bootstrap.css" type ="text/css") 
+		%link(rel="stylesheet" href="css/bootstrap.css" type ="text/css")
+		%style{:type=>"text/css"}
+			body{padding-top:5px;}
 	%body
-		%h1 Laura's Bug Tracker
-		=yield
+		.navbar
+			.navbar-inner
+				.container
+					%ul
+						%li
+							%a{:class=>"brand", :href=>"#"} Laura's Bug Tracker
+		.container
+			=yield
